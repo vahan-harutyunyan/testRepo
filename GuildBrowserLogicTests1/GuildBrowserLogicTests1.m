@@ -1,6 +1,6 @@
 //
-//  CharacterTests.m
-//  GuildBrowser
+//  GuildBrowserLogicTests1.m
+//  GuildBrowserLogicTests1
 //
 //  Created by Vahan Harutyunyan on 2/10/14.
 //  Copyright (c) 2014 Charlie Fulton. All rights reserved.
@@ -10,17 +10,15 @@
 #include "Character.h"
 #include "Item.h"
 
-@interface CharacterTests : SenTestCase
+@interface GuildBrowserLogicTests1 : SenTestCase
 
 @end
 
-@implementation CharacterTests{
+@implementation GuildBrowserLogicTests1{
     // 1
     NSDictionary *_characterDetailJson;
     Character *_testGuy;
 }
-
-
 
 // 2
 -(void)setUp
@@ -45,10 +43,7 @@
     _testGuy = [[Character alloc] initWithCharacterDetailData:_characterDetailJson];
 }
 
-- (void)testExample
-{
-     STFail(@"Unit tests are not implemented yet in GuildBrowserTests");
-}
+
 
 -(void)tearDown
 {
@@ -108,6 +103,7 @@
     STAssertEqualObjects(_testGuy.trinketItem2.name,@"Bone-Link Fetish", @"neck name is wrong");
     STAssertEqualObjects(_testGuy.rangedItem.name,@"Ironfeather Longbow", @"neck name is wrong");
 }
+
 
 
 
