@@ -17,6 +17,7 @@
 @implementation CharacterTests{
     // 1
     NSDictionary *_characterDetailJson;
+    Character *_testGuy;
 }
 
 
@@ -40,6 +41,8 @@
     
     
     _characterDetailJson = json;
+    
+    _testGuy = [[Character alloc] initWithCharacterDetailData:_characterDetailJson];
 }
 
 -(void)tearDown
